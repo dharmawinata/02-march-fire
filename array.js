@@ -78,32 +78,45 @@
 // Tampilkan sesuai hasil berikut :
 
 // let watches = ['Swiss Army','Dublot','Alba'];
-// console.log("Saya punya " + watches[0] + ', ' +  watches[1] + ', dan ' + watches[2]);
+// // Result -> Saya punya Swiss Army, Dublot, dan Alba.
 
-// Result -> Saya punya Swiss Army, Dublot, dan Alba.
+// function printArloji(){
+//     let temp = "Saya punya"
+//     for(let i = 0; i < watches.length; i++){
+//         if(i !== watches.length - 1){
+//             temp += ` ${watches[i]},`
+//         }else {
+//             temp += ` dan ${watches[i]}.`
+//         }
+//     }
+//     return temp;
+// }
+// console.log(printArloji(watches));
+
 
 
 // ## Soal 2
 
 // Uraikan kata dari kalimat lalu masukkan ke dalam array
 
-
 // let pantun = "makan nasi bayar pake paku";
 // let temp = '';
 // let result = [];
 
-// for(let i = 0; i < pantun.length; i++) {
-//     if(pantun[i] != ' '){
-//         temp += pantun[i];
-//     }if(pantun[i] === ' '){
-//        result.push(temp);
-//         temp = '';
-//     }if(i === pantun.length - 1){
+// function poetryFormatter(){
+//     for(let i = 0; i < pantun.length; i++) {
+//         if(pantun[i] != ' '){
+//             temp += pantun[i];
+//         }if(pantun[i] === ' '){
 //         result.push(temp);
-//         temp = '';
+//             temp = '';
+//         }if(i === pantun.length - 1){
+//             result.push(temp);
+//             temp = '';
+//         }
 //     }
 // }
-// console.log(result);
+// console.log(poetryFormatter(pantun));
 
 // Result -> ["makan","nasi","bayar","pake","paku"]
 
@@ -114,24 +127,28 @@
 
 //Input : ['blueberry','apple','orange','anggur','banana']
 
-//    let fruits = ['blueberry','apple','orange','anggur','banana'];
+//    let input = ['blueberry','apple','orange','anggur','banana'];
 
-//    let abjadA = [];
-//    let abjadB = [];
-//    let abjadO = [];
-//    let result = [];
+//    function groupFruits(input){
+//        let kamus = 'abcdefghijklmnopqrstuvwxyz';
+//        let temp = [];
+//        let result = [];
 
-//    for(let i = 0; i < fruits.length; i++){
-//        if(fruits[i][0] === 'a'){
-//            abjadA.push(fruits[i]);
-//        }else if(fruits[i][0] === 'b'){
-//            abjadB.push(fruits[i]);
-//        }else if(fruits[i][0] === 'o'){
-//            abjadO.push(fruits[i]);
+//        for(let i = 0; i < kamus.length; i++){
+//            for(let j = 0; j < input.length; j++){
+//                if(kamus[i] === input[j][0]){
+//                    temp.push(input[j]);
+//                 }
+//             }
+//             if(temp.length !== 0){
+//                     result.push(temp)
+//                     temp = []
+//                 }
 //        }
+//        return result;
 //    }
-//    result = [abjadA, abjadB, abjadO];
-//    console.log(result);
+//    console.log(groupFruits(input));
+
 
    /*Output : [
        ['anggur','apple'],
@@ -156,29 +173,29 @@
 //     [3,4]
 // ]
 
-// let rumus = (matrix[0][0] * matrix[1][1]) - matrix[0][1] * matrix[1][0] ;
-
-// console.log(rumus)
-
+// function determinan(matrix) {
+//     let result = matrix [0][0] * matrix [1][1] - matrix[0][1] * matrix [1][0];
+//     return result;
+// }
+// console.log(determinan([
+//     [1,2],
+//     [3,4]
+// ]));
 
 
 // ## Soal 5
 
 // Gabungkan karakter menjadi sebuah kata
 
-let kode = [
-    [" "," ","M"," "," "],
-    [" "," "," ","a"," "],
-    [" "," "," "," "," "],
-    [" ","k"," "," "," "],
-    [" "," "," "," "," "],
-    [" "," "," "," ","a"],
-    [" "," "," ","n"," "],
-]
-
-let character = [];
-
-// Result -> Makan
+// let kode = [
+//     [" "," ","M"," "," "],
+//     [" "," "," ","a"," "],
+//     [" "," "," "," "," "],
+//     [" ","k"," "," "," "],
+//     [" "," "," "," "," "],
+//     [" "," "," "," ","a"],
+//     [" "," "," ","n"," "],
+// ]
 
 // Algoritma
 /**
@@ -188,9 +205,31 @@ let character = [];
  * Tampilkan
  */
 
-for(let i = 0; i < kode.length; i++) {
-    if(kode[i] === " "){
-        
+function susunKata(arr){
+    let temp = '';
+    for(let i=0; i < arr.length; i++){
+        for(let j=0; j < arr[i].length; j++){
+            if(arr[i][j] !== ' '){
+                temp += arr[i][j];
+            }  
+        }
     }
+    return temp;
 }
+
+console.log(susunKata([
+    [" "," ","M"," "," "],
+    [" "," "," ","a"," "],
+    [" "," "," "," "," "],
+    [" ","k"," "," "," "],
+    [" "," "," "," "," "],
+    [" "," "," "," ","a"],
+    [" "," "," ","n"," "],
+]));
+
+// Result -> Makan
+
+
+
+
 
