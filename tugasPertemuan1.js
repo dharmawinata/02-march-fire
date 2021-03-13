@@ -111,28 +111,73 @@
  */
 
 // CODING
-var sisi = 6;
-var kelilingPersegi = 4 * sisi;
-console.log(kelilingPersegi);
+// var sisi = 6;
+// var kelilingPersegi = 4 * sisi;
+// console.log(kelilingPersegi);
+
  
 //  2. Buat algoritma, pseudocode, dan codingan : Luas permukaan balok
+
+// ALGORITMA
+/**
+ * Tentukan panjang
+ * Tentukan lebar
+ * Tentukan tinggi
+ * Tentukan rumus
+ * Rumus : 2 ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi))
+ * Tampilkan luasPermukaanBalok
+ */
+
+// PSEUDOCODE
+/**
+ * STORE panjang WITH ANY NUMBER
+ * STORE lebar WITH ANY NUMBER
+ * STORE tinggi WITH ANTY NUMBER
+ * SET rumus WITH 2 * ((panjang TIMES lebar) ADD (panjang TIMES tinggi) ADD (lebar TIMES tinggi))
+ * Display luasPermukaanBalok
+ */
+
+// CODING
+// var panjang = 10;
+// var lebar = 4;
+// var tinggi = 2;
+
+// var luasPermukaanBalok = 2 * ((panjang * lebar) + (panjang * tinggi) + (lebar * tinggi));
+// console.log(luasPermukaanBalok);
+
  
 //  3.  Buat kodingan, untuk menjawab pertanyaan " Who are you ?" menggunakan variable.
  
-//      //Code here
-//      var name;
-//      var age;
+//Code here
+// var nama = "Vincent";
+// var age = 28;
  
-//      //Output
-//      //My name is Vincent, and i'm 28 years old.
+// //Output
+// //My name is Vincent, and i'm 28 years old.
+// console.log("My name is" + " " + nama + ", and i'm" + " " + age + " " + "years old");
+
 
 //  4. Buat kodingan, untuk membuat random number. Range number 1 - 10.
  
-//      //Code here
-//      var number;
+//Code here
+// var number = Math.floor((Math.random() * 10) + 1);
+// console.log(number);
  
-//      //Output 
-//      //Your number is 1
-//      //Your number is 5
+//Output 
+///Your number is 1
+//Your number is 5
 
-//  5. Buat kodingan, untuk membuat Nomor Induk mahasiswa. Rumus : <Nama_Mahasiswa><Nomor_Absen><Lulus/Tidak> Contoh : James15true dengan syarat nomor absen random, Range 1 - 50
+//  5. Buat kodingan, untuk membuat Nomor Induk mahasiswa. 
+// Rumus : <Nama_Mahasiswa><Nomor_Absen><Lulus/Tidak> 
+// Contoh : James15true dengan syarat nomor absen random, Range 1 - 50
+
+var nim;
+var nama;
+var nomor;
+var keterangan;
+var rumus;
+
+if(nim = "James"){
+    Math.floor(Math.random() * 50) + 1;
+    console.log("True");
+}

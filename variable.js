@@ -8,7 +8,7 @@
 
 
 // OPERATOR LOGIC
-// AudioNode, OR, NOT, == , ===
+// AND, OR, NOT, == , ===
 // == operator ini untuk mebandingkan nilai
 // === operator ini untuk membandingkan nilai dan juga type data
 
